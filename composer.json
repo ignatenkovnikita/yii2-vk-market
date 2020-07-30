@@ -1,0 +1,29 @@
+{
+  "name": "ignatenkovnikita/yii2-vk-market",
+  "description": "Yii2 VK Markeet Module",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "module",
+    "defcode",
+    "def",
+    "gsm info",
+    "def code"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Nikita Ignatenkov",
+      "email": "ignatenkov.n@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ignatenkovnikita\\vkmarket\\": ""
+    }
+  }
+}
