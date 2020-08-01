@@ -6,10 +6,9 @@
     "yii2",
     "extension",
     "module",
-    "defcode",
-    "def",
-    "gsm info",
-    "def code"
+    "vk",
+    "market",
+    "vk market"
   ],
   "license": "BSD-3-Clause",
   "authors": [
@@ -19,7 +18,9 @@
     }
   ],
   "require": {
-    "yiisoft/yii2": "*"
+    "yiisoft/yii2": "*",
+    "ignatenkovnikita/yii2-gii-addons": "*",
+    "ignatenkovnikita/yii2-imagemanager": "dev-master"
   },
   "autoload": {
     "psr-4": {
