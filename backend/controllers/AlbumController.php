@@ -115,7 +115,14 @@ class AlbumController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             $path = Yii::getAlias('@storage/web/source' . DIRECTORY_SEPARATOR . $model->vkmarketAttachment->path);
+
+            if($model->vk_id){
             $itemId = $this->vkService->editAlbum($model->vk_id, $model->title, $model->main_album, $path);
+            }else{
+            $itemId = $this->vkService->addAlbum( $model->title, $model->main_album, $path);
+                $model->vk_id = $itemId;
+                $model->update(['vk_id']);
+            }
 
             $old = \yii\helpers\ArrayHelper::getColumn($model->oldProducts, 'id');
 

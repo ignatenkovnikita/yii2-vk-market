@@ -20,7 +20,9 @@
   "require": {
     "yiisoft/yii2": "*",
     "ignatenkovnikita/yii2-gii-addons": "*",
-    "ignatenkovnikita/yii2-imagemanager": "dev-master"
+    "ignatenkovnikita/yii2-imagemanager": "dev-master",
+    "vkcom/vk-php-sdk": "*",
+
   },
   "autoload": {
     "psr-4": {

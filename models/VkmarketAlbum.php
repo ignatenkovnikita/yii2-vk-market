@@ -5,6 +5,7 @@ namespace ignatenkovnikita\vkmarket\models;
 use ignatenkovnikita\imagemanager\models\generated\ImageManager;
 use voskobovich\linker\LinkerBehavior;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "vkmarket_album".
@@ -18,7 +19,7 @@ use Yii;
  * @property integer $created_by Created By
  * @property integer $updated_by Updated By
  */
-class VkmarketAlbum extends \common\ActiveRecord
+class VkmarketAlbum extends ActiveRecord
 {
     const NAME_ATTACHMENT = 'vkmarket.attachment';
 
