@@ -80,7 +80,7 @@ class Vk
                                      $mainPath,
                                      $additionalArray = [],
                                      $url = null,
-                                     $oldPrice)
+                                     $oldPrice = null)
     {
         $product = new Product($title, $description, $categoryId, $price);
         $product->setUrl($url);
