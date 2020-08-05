@@ -65,15 +65,26 @@ class Vk
     {
         return $this->vkService->addProductToAlbum([$albumId], $vkItemId);
     }
+
     public function removeFromAlbum($albumId, $vkItemId)
     {
         return $this->vkService->removeFromAlbum([$albumId], $vkItemId);
     }
 
 
-    public function addOrEditProduct($id = null, $title, $description, $categoryId, $price, $mainPath, $additionalArray = [])
+    public function addOrEditProduct($id = null,
+                                     $title,
+                                     $description,
+                                     $categoryId,
+                                     $price,
+                                     $mainPath,
+                                     $additionalArray = [],
+                                     $url = null,
+                                     $oldPrice)
     {
         $product = new Product($title, $description, $categoryId, $price);
+        $product->setUrl($url);
+        $product->setOldPrice($oldPrice);
         $product->setVkItemId($id);
         $photo = new Photo();
 
@@ -87,5 +98,10 @@ class Vk
         } else {
             return $this->vkService->addProduct($product, $photo);
         }
+    }
+
+    public function getCategories($count, $offset = '')
+    {
+        return $this->vkService->getCategories($count, $offset = '');
     }
 }
