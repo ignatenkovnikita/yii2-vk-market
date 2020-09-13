@@ -16,5 +16,6 @@ interface Product
     public function getVkPhotosArrPath();
     public function getVkUrl();
     public function getVkOldPrice();
+    public function getVkDeleted();
 
 }

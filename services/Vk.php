@@ -80,9 +80,10 @@ class Vk
                                      $mainPath,
                                      $additionalArray = [],
                                      $url = null,
-                                     $oldPrice = null)
+                                     $oldPrice = null,
+                                     $deleted = false)
     {
-        $product = new Product($title, $description, $categoryId, $price);
+        $product = new Product($title, $description, $categoryId, $price, $deleted);
         $product->setUrl($url);
         $product->setOldPrice($oldPrice);
         $product->setVkItemId($id);

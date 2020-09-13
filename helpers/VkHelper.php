@@ -20,8 +20,9 @@ class VkHelper
             $product->getVkPrice(),
             $product->getVkMainPhotoPath(),
             $product->getVkPhotosArrPath(),
-            $product->getUrl(true),
-            $product->getOldPrice());
+            $product->getVkUrl(true),
+            $product->getVkOldPrice(),
+            $product->getVkDeleted());
 
         if (empty($product->vk_id)) {
             $product->vk_id = $id;
