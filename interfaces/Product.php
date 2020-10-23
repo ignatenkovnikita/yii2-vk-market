@@ -17,5 +17,6 @@ interface Product
     public function getVkUrl();
     public function getVkOldPrice();
     public function getVkDeleted();
+    public function isValidExportVk();
 
 }
