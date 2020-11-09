@@ -14,9 +14,9 @@ class Vk
     /** @var VkServiceDispatcher $vkService */
     private $vkService;
 
-    public function __construct()
+    public function __construct($nameModule = 'vkmarket')
     {
-        $module = \Yii::$app->getModule('vkmarket');
+        $module = \Yii::$app->getModule($nameModule);
         $accessToken = $module->accessToken;
         $ownerId = $module->ownerId; // идентификатор владельца группы
         $groupId = $module->groupId; // идентификатор группы

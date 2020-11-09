@@ -9,9 +9,9 @@ use ignatenkovnikita\vkmarket\services\Vk;
 class VkHelper
 {
 
-    public static function createOrUpdate(Product $product)
+    public static function createOrUpdate(Product $product, $moduleName = 'vkmarket')
     {
-        $vkService = new Vk();
+        $vkService = new Vk($moduleName);
 
         $id = $vkService->addOrEditProduct($product->vk_id,
             $product->getVkName(),
@@ -29,5 +29,4 @@ class VkHelper
             $product->updateAttributes(['vk_id']);
         }
     }
-
 }
